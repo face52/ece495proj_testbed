@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gmaps</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body class="<%= controller.controller_name %>">
+
+
+      <% if session[:user_id] %>
+        <ul>
+          <li><%= link_to 'Main Page', main_path %></li>
+          <li><%= link_to 'About This Site', admin_path %></li>
+          <li><%= link_to 'Resorts', resorts_path %></li>
+          <li><%= link_to 'Comments', comments_path %></li>
+          <li><%= link_to 'Users', users_path %></li>
+        </ul>
+        <%= button_to 'Logout', logout_path, method: :delete %>
+      <% end %>
+
+    <div id="main">
+      <%= yield %>
+    </div>
+
+</body>
+</html>
+

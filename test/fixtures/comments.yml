@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  resort_id: 1
+  body: MyText
+  rating: 1
+
+two:
+  resort_id: 1
+  body: MyText
+  rating: 1
