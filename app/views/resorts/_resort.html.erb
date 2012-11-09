@@ -1,0 +1,5 @@
+<%= div_for @resort do %>
+  <h2><%= link_to_unless_current h(@resort.title) %></h2>
+  <%= simple_format h(@resort.body) %>
+<% end %>
+
